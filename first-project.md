@@ -83,3 +83,23 @@ mvn eclipse:eclipse
 ```
 After you run this command, you can import the project into Eclipse as discussed in the next section.
 
+## Add Java files to the Maven project using Eclipse
+To make it easier to work with the Maven generated project, import it into the Eclipse development environment, as shown in the following illustration.
+
+![eclipse-import-project](https://helpx.adobe.com/content/dam/help/en/experience-manager/using/maven_arch11/_jcr_content/main-pars/image_915987931/project.png)
+
+** Note: ** Do not worry about the errors reported in Eclipse. It does not read the POM file where the APIs are resolved. You build the bundle with Maven. Eclipse is used to edit the Java files and the POM file.
+
+### After you import the project into Eclipse, notice each module is a separate Eclipse project:
+
+* **core** - where Java files that are used in OSGi services and sling servlets are located
+* **launcher** - where additional Java files are located
+* **tests** - Java files for tests like JUNIT tests
+* **apps** - content under /apps
+* **content** - content under /content
+
+When you want to create an OSGi service, you work under core. Likewise, if you want to create a HTL component, you can work under apps.
+By default, the Archetype 11 project creates a number of Java files that you can use as a starting point in your project (these Java files are located under core).
+
+The following illustration shows the packages.
+![eclipse-scaffolding-project](https://helpx.adobe.com/content/dam/help/en/experience-manager/using/maven_arch11/_jcr_content/main-pars/image_215937034/java.png)
