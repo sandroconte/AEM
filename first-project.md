@@ -100,6 +100,8 @@ To make it easier to work with the Maven generated project, import it into the E
 
 When you want to create an OSGi service, you work under core. Likewise, if you want to create a HTL component, you can work under apps.
 By default, the Archetype 11 project creates a number of Java files that you can use as a starting point in your project (these Java files are located under core).
-
 The following illustration shows the packages.
+
 ![eclipse-scaffolding-project](https://helpx.adobe.com/content/dam/help/en/experience-manager/using/maven_arch11/_jcr_content/main-pars/image_215937034/java.png)
+
+**Rif.** [Creating an Adobe Experience Manager 6.3 Project using Adobe Maven Archetype 11](https://helpx.adobe.com/experience-manager/using/maven_arch11.html)
