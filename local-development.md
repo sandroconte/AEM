@@ -97,3 +97,4 @@ $ mvn help:effective-settings
 ```
 ## [Set Up an Integrated Development Environment](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#set-up-an-integrated-development-environment)
 
+Follow the instructions on [eclipse adobe plugin](https://eclipse.adobe.com/aem/dev-tools/)
