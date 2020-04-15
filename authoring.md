@@ -12,4 +12,4 @@ they are configurable via components console
 * select template specified
 * complete form with title, name, tags properties
 * in advance choose a alias
-![editing](https://github.com/sandroconte/AEM/blob/master/images/components-console.png)
+![editing](https://github.com/sandroconte/AEM/blob/master/images/editormode.png)
