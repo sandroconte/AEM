@@ -99,4 +99,4 @@ $ mvn help:effective-settings
 
 Follow the instructions on [eclipse adobe plugin](https://eclipse.adobe.com/aem/dev-tools/) for installing the Adobe plugin for Eclipse
 
-<video preload="metadata" src="https://images-tv.adobe.com/avp/vr/1b0287d8-d946-4fc0-b1c7-62a6d04971df/585bf533-e190-40c0-ab73-ae5ce50214b5/bd32e922-87b2-40fa-a81c-5092ea6f2bc5_20190109100413.1920x1080at3000_h264.mp4" class="mpc-player__video" tabindex="0"><source src="https://images-tv.adobe.com/avp/vr/1b0287d8-d946-4fc0-b1c7-62a6d04971df/585bf533-e190-40c0-ab73-ae5ce50214b5/bd32e922-87b2-40fa-a81c-5092ea6f2bc5_20190109100413.1920x1080at3000_h264.mp4" type="video/mpeg4"></video>
+### Next step: [Adobe plugin installation setup on Eclipse](https://video.tv.adobe.com/v/25906?quality=12)
