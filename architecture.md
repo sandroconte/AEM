@@ -34,4 +34,6 @@ While Granite is open development, it is not open source.
 # JCR
 ![JCR](./images/jcr.png)
 
+![Everything is a resources](./images/resources.png)
+
 
