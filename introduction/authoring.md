@@ -1,10 +1,10 @@
 # Authoring skills
 Thi illustration rappresent the main keyword for authoring instance
-![authoring keyword](https://github.com/sandroconte/AEM/blob/master/images/authoting.png)
+![authoring keyword](../images/authoting.png)
 ## Compoents
-![componets](https://github.com/sandroconte/AEM/blob/master/images/components.png)
+![componets](../images/components.png)
 they are configurable via components console
-![componets console](https://github.com/sandroconte/AEM/blob/master/images/components-console.png)
+![componets console](../images/components-console.png)
 ## Create pages
 * enter in the sites
 * show as view cards properties 
@@ -12,4 +12,4 @@ they are configurable via components console
 * select template specified
 * complete form with title, name, tags properties
 * in advance choose a alias
-![editing](https://github.com/sandroconte/AEM/blob/master/images/editormode.png)
+![editing](../images/editormode.png)
