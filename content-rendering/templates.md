@@ -15,4 +15,4 @@ Template are used for creating pages and for building the intial page content in
 6. Complete all fields of the form
 
 ## Restrict access
-![Restrict access](../images/template-restrict-access.png)
+![Restrict access](../images/templalte-restrict-access.png)
