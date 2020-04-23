@@ -6,7 +6,7 @@
 
 ![image-20200422143840649](../images/dev-designs-dialog.png)
 
-# Create Image compoent
+# Create Image component
 
 1. Create a hero component in /apps/training/components/structure
 
@@ -108,3 +108,93 @@
 10. Create parameters node with type nt:unstructured and property sling:resourceType, string, training/components/structure/hero
 
 ![image-20200423013115850](../images/dev-hero-component.png)
+
+
+
+# Create design dialog box
+
+1. Go to http://localhost:4502/sites.html/content
+2. Select Training first-page and click to Properties
+3. In Advanced complete Design field with value /etc/designs/training
+4. Save & Close and go to http://localhost:4502/editor.html/content/Training/en/products.html and select Design mode instead Edit
+5. Copy /libs/foundation/components/text/cq:design_dialog node and paste in /apps/training/components/structure/hero
+
+![image-20200423225851327](../images/dev-hero-design-dialog.png)
+
+6. Delete Formatting, Paraformat, Characters nodes from hero component
+
+7. Delete /apps/training/components/structure/hero/cq:design_dialog/content/items/plugins/items/Features/items/uppercase node and create new node uppercase  nt:unstructured
+
+8. Add these properties to uppercase node
+
+   1. name, String, ./uppercase
+   2. sling:resourceType, String, granite/ui/components/foundation/form/checkbox
+   3. text, String, Uppercase Title?
+   4. value, Boolean, true
+
+9. Replace this code 
+
+   ```javascript
+   "use strict";
+   use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js"], function (AuthoringUtils) {
+       var CONST = {
+           PROP_TITLE: "jcr:title",
+           PROP_REF_HERO_IMAGE: "fileReference",
+           PROP_UPLOAD_HERO_IMAGE: "file",
+           PROP_UPPERCASE: "uppercase"
+       }
+       
+       var hero = {}
+       
+       //Get the title text
+       hero.text = properties.get(CONST.PROP_TITLE)
+               || pageProperties.get(CONST.PROP_TITLE)
+               || currentPage.name;
+   
+       
+       //Check for file reference from the DAM
+       var image = properties.get(CONST.PROP_REF_HERO_IMAGE, String.class);
+       if(image == "undefined"){
+       	//Check for file upload
+       	var res = resource.getChild("file");
+       	if(res != null){
+       		image = res.getPath();
+       	}
+       }
+       
+       if(image != "undefined"){
+       	hero.style = "background-image:url(" + image + ");";
+       }
+       
+       //Add uppercase design to hero text
+       if(currentStyle.get(CONST.PROP_UPPERCASE)){
+       	hero.uppercase = "text-transform:uppercase;";
+       }
+       
+       
+       
+       return hero;
+   });
+   ```
+
+   to hero.js
+
+10. Replace this code
+
+```html
+<div data-sly-use.hero="hero.js" class="we-HeroImage width-full ratio-16by9" style="${hero.style @ context='styleString'}">
+        <div class="container cq-dd-image">
+            <div class="we-HeroImage-wrapper">
+                
+                <strong class="we-HeroImage-title" style="${hero.uppercase @ context='styleString'}">${hero.text}</strong>
+
+            </div>
+        </div>
+    </div>
+```
+
+to hero.html
+
+![image-20200423231305504](../images/dev-hero-design-dialog-uppercase.png)
+
+ 
