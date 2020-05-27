@@ -49,9 +49,15 @@ To create an Experience Manager archetype project, perform these steps:
 
 1. Open the command prompt and go to your working directory (for example, C:\AdobeCQ).
 
-2. Run the following Maven command:
+2. Run the following Maven command 
+2a. on 6.3:
 ```
 mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -DarchetypeGroupId=com.adobe.granite.archetypes -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=11 -DarchetypeCatalog=https://repo.adobe.com/nexus/content/groups/public/
+```
+2b. on 6.4:
+
+```
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -DarchetypeGroupId=com.adobe.granite.archetypes -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=13 -DarchetypeCatalog=https://repo.adobe.com/nexus/content/groups/public/
 ```
 3. When prompted, specify the following information:
 * groupId - AEM63App
